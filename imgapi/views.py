@@ -24,6 +24,10 @@ def api_root(request, format=None):
         'users': reverse('user-list', request=request, format=format),
         'images': reverse('image-list', request=request, format=format),
         'all posts': reverse('post-list', request=request, format=format),
+        'register': reverse('register', request=request, format=format),
+        'images/like/(?P<pk>[0-9]+)': reverse('like-image', kwargs={'pk': 1}, request=request, format=format),
+        'follow/(?P<pk>[0-9]+)': reverse('followunfollow', kwargs={'action': 'follow', 'pk': 1}, request=request, format=format),
+        'unfollow/(?P<pk>[0-9]+)': reverse('followunfollow', kwargs={'action': 'unfollow', 'pk': 1}, request=request, format=format),
     })
 
 
