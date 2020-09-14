@@ -317,10 +317,6 @@ In [41]:
 ```
 Current user can like a post (image).
 ```
-In [39]: response=requests.post('http://localhost:8000/imgapi/api/unfollow/5/', headers=headers)
-
-In [40]: response.json()
-Out[40]: {'Message': 'You are no longer following user4'}
 
 In [41]: response=requests.post('http://localhost:8000/imgapi/api/images/like/1/', headers=headers)
 
