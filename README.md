@@ -45,11 +45,12 @@ files = {'image': (<file_name>, <bytes>)}
 ```
 
 # Installation
-Clone the repository, cd into the directory, create virtualenv and install requirements.txt.
+Clone the repository, cd into the directory, create a virtualenv, activate it and install requirements.txt.
 ```
 git clone https://github.com/e/drfhedgehog.git
 cd drfhedgehog/
 virtualenv -p `which python3` venv
+. ./venv/bin/activate
 pip install -r requirements.txt 
 ```
 ```
@@ -77,7 +78,7 @@ The settings.py file is pointing to a sample sqlite database which is included i
 - user3 password: user3
 - user4 password: user4
 
-Some users are following others and they have some images with likes, so you can skip the "setting up the database part", get a token with those credentials and start issuing requests with your favourite tool (Python, cURL, Postman...) right away, but here is how you would start from scratch:
+Some users are following others and they have some images with likes, so you can skip the "setting up the database part", fire up the development server, get a token with those credentials and start issuing requests with your favourite tool (Python, cURL, Postman...) right away, but here is how you would start from scratch:
 
 
 # Setting up the database
